@@ -19,8 +19,8 @@ phases:
       - echo Logging in to Amazon ECR...
       - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
       - REPOSITORY_URI=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
-      - export AWS_ACCESS_KEY_ID="AKIATCKATRF4XCJWR6NG"
-      - export AWS_SECRET_ACCESS_KEY="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"
+      - export AWS_ACCESS_KEY_ID=""
+      - export AWS_SECRET_ACCESS_KEY=""
       - aws sts get-caller-identity
       - aws eks --region us-east-1 update-kubeconfig --name eks-demo-cluster
       
