@@ -1,12 +1,12 @@
-# Default values for heml-chart.
+# Default values for mychart.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 
 image:
-  repository: nginx
-  pullPolicy: IfNotPresent
+  repository: 211125766521.dkr.ecr.us-east-1.amazonaws.com/spring-app:latest
+  pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
 
@@ -40,7 +40,7 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
-  type: ClusterIP
+  type: LoadBalancer
   port: 80
 
 ingress:
