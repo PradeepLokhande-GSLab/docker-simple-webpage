@@ -21,7 +21,7 @@ phases:
       - REPOSITORY_URI=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
       - "mkdir ~/.kube/"
       - aws sts get-caller-identity
-      - aws eks --region us-east-1 update-kubeconfig --name eks-demo-cluster --role-arn arn:aws:iam::211125766521:role/EksCodeBuildkubectlRole
+      - aws eks --region us-east-1 update-kubeconfig --name eks-demo-cluster --role-arn arn:aws:iam::211125766521:role/iam-role-terraform
       - kubectl get nodes
       - kubectl get pods
       
