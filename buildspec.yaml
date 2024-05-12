@@ -22,6 +22,8 @@ phases:
       - "mkdir ~/.kube/"
       - aws sts get-caller-identity
       - aws eks --region us-east-1 update-kubeconfig --name eks-demo-cluster --role-arn arn:aws:iam::211125766521:role/EksCodeBuildkubectlRole
+      - kubectl get nodes
+      - kubectl get pods
       
   
 
